@@ -20,9 +20,9 @@ public final class Messages extends NLS {
 		// Do not instantiate
 	}
 	
-	public static String Btn_Display;
-	public static String Dlg_ResolveError;
-	public static String Dlg_ResolveErrorMsg;
+	public static String Btn_Display = ch.elexis.core.l10n.Messages.Btn_Display;
+	public static String Dlg_ResolveError = ch.elexis.core.l10n.Messages.Dlg_ResolveError;
+	public static String Dlg_ResolveErrorMsg = ch.elexis.core.l10n.Messages.Dlg_ResolveErrorMsg;
 	
 	static {
 		NLS.initializeMessages(BUNDLE_NAME, Messages.class);

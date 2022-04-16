@@ -37,7 +37,8 @@ Require-Bundle: ch.rgw.utility;bundle-version="3.9.100",
  ch.elexis.core.services;bundle-version="3.9.0",
  ch.elexis.core.jpa,
  ch.elexis.core.jpa.entities;bundle-version="1.0.0",
- ch.elexis.core.importer.div
+ ch.elexis.core.importer.div,
+ ch.elexis.core.l10n;bundle-version="3.9.0"
 Bundle-ActivationPolicy: lazy
 Import-Package: com.healthmarketscience.jackcess;version="4.0.0",
  com.opencsv;version="3.10.0",

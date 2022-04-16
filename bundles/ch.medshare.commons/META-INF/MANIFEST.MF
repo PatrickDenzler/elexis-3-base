@@ -17,4 +17,5 @@ Import-Package: org.bouncycastle.jce.provider;version="1.59.0",
  org.eclipse.swt.events,
  org.eclipse.swt.graphics,
  org.eclipse.swt.widgets
+Require-Bundle: ch.elexis.core.l10n;bundle-version="3.9.0"
 

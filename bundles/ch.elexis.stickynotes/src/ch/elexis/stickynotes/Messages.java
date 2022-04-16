@@ -13,11 +13,11 @@ import org.eclipse.osgi.util.NLS;
 
 public class Messages extends NLS {
   private static final String BUNDLE_NAME = "ch.elexis.stickynotes.messages";
-    public static String Preferences_BackgroundColor;
-    public static String Preferences_ForegroundColor;
-    public static String StickyNotesView_NoPatientSelected;
-    public static String StickyNotesView_StickyNotesName;
-    public static String StickyNotesView_StickyNotesNameDash;
+    public static String Preferences_BackgroundColor = ch.elexis.core.l10n.Messages.Preferences_BackgroundColor;
+    public static String Preferences_ForegroundColor = ch.elexis.core.l10n.Messages.Preferences_ForegroundColor;
+    public static String StickyNotesView_NoPatientSelected = ch.elexis.core.l10n.Messages.StickyNotesView_NoPatientSelected;
+    public static String StickyNotesView_StickyNotesName = ch.elexis.core.l10n.Messages.StickyNotesView_StickyNotesName;
+    public static String StickyNotesView_StickyNotesNameDash = ch.elexis.core.l10n.Messages.StickyNotesView_StickyNotesNameDash;
 
     static { // load message values from bundle file
     NLS.initializeMessages(BUNDLE_NAME, Messages.class);
