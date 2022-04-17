@@ -112,7 +112,7 @@ public class WeekComposite extends Composite implements ISelectionProvider, IAge
 		});
 		
 		// register context menu for browser
-		menuService.registerContextMenu(browser, Messages.WeekComposite_14);
+		menuService.registerContextMenu(browser, "at.medevit.elexis.agenda.ui.popupmenu.week");
 		
 		browser.addProgressListener(new ProgressAdapter() {
 			@Override

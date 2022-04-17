@@ -48,9 +48,10 @@ public class Messages{
     public static String SerienTermin_thursday = ch.elexis.core.l10n.Messages.SerienTermin_thursday;
     public static String SerienTermin_tuesday = ch.elexis.core.l10n.Messages.SerienTermin_tuesday;
     public static String SerienTermin_wednesday = ch.elexis.core.l10n.Messages.SerienTermin_wednesday;
-	public static String RecurringAppointmentDialog_3;
-	public static String RecurringAppointmentDialog_6;
-	public static String RecurringAppointmentDialog_10;
+    public static String RecurringAppointmentDialog_3 = ch.elexis.core.l10n.Messages.RecurringAppointmentDialog_3;
+    public static String RecurringAppointmentDialog_6 = ch.elexis.core.l10n.Messages.RecurringAppointmentDialog_6;
+    public static String RecurringAppointmentDialog_8 = ch.elexis.core.l10n.Messages.RecurringAppointmentDialog_8;
+    public static String RecurringAppointmentDialog_10 = ch.elexis.core.l10n.Messages.RecurringAppointmentDialog_10;
 
 }
 
