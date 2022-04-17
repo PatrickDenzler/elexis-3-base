@@ -159,7 +159,7 @@ public class LoadEventsFunction extends AbstractBrowserFunction {
 		
 		@Override
 		public String toString(){
-			return "Timespan [" + startDate + " - " + endDate + "]";
+			return "Timespan [" + startDate + " - " + endDate + "]"; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		}
 	}
 	
@@ -171,7 +171,7 @@ public class LoadEventsFunction extends AbstractBrowserFunction {
 		
 		cache = CacheBuilder.newBuilder().maximumSize(7).build(new TimeSpanLoader());
 		
-		timer = new Timer("Agenda check for updates", true);
+		timer = new Timer("Agenda check for updates", true); //$NON-NLS-1$
 		timer.schedule(new CheckForUpdatesTimerTask(this, uiSynchronize), 10000, 10000);
 	}
 	
@@ -183,7 +183,7 @@ public class LoadEventsFunction extends AbstractBrowserFunction {
 					.map(IUser::getAssignedContact).orElse(null);
 				currentTimeSpan =
 					new TimeSpan(getDateArg(arguments[0]), getDateArg(arguments[1]), userContact);
-				ContextServiceHolder.get().postEvent(ElexisEventTopics.BASE + "agenda/loadtimespan",
+				ContextServiceHolder.get().postEvent(ElexisEventTopics.BASE + "agenda/loadtimespan", //$NON-NLS-1$
 					new LoadEventTimeSpan(currentTimeSpan.startDate, currentTimeSpan.endDate));
 				long currentLastUpdate =
 					CoreModelServiceHolder.get().getHighestLastUpdate(IAppointment.class);
@@ -195,9 +195,9 @@ public class LoadEventsFunction extends AbstractBrowserFunction {
 					for (TimeSpan timeSpan : cacheAsMap.keySet()) {
 						EventsJsonValue eventsJson = cache.get(timeSpan);
 						if (eventsJson.updateWith(changedPeriods, userContact)) {
-							logger.debug("Updated timespan " + timeSpan);
+							logger.debug("Updated timespan " + timeSpan); //$NON-NLS-1$
 						} else {
-							logger.debug("No update to timespan " + timeSpan);
+							logger.debug("No update to timespan " + timeSpan); //$NON-NLS-1$
 						}
 					}
 					knownLastUpdate = currentLastUpdate;
@@ -215,10 +215,10 @@ public class LoadEventsFunction extends AbstractBrowserFunction {
 				});
 				return eventsJson.getJson();
 			} catch (ExecutionException e) {
-				throw new IllegalStateException("Error loading events", e);
+				throw new IllegalStateException("Error loading events", e); //$NON-NLS-1$
 			}
 		} else {
-			throw new IllegalArgumentException("Unexpected arguments");
+			throw new IllegalArgumentException("Unexpected arguments"); //$NON-NLS-1$
 		}
 	}
 	
@@ -231,7 +231,7 @@ public class LoadEventsFunction extends AbstractBrowserFunction {
 	private List<IPeriod> getChangedPeriods(){
 		IQuery<IAppointment> query =
 			CoreModelServiceHolder.get().getQuery(IAppointment.class, true, true);
-		query.and("lastupdate", COMPARATOR.GREATER, Long.valueOf(knownLastUpdate));
+		query.and(Messages.LoadEventsFunction_9, COMPARATOR.GREATER, Long.valueOf(knownLastUpdate));
 		if (!resources.isEmpty()) {
 			String[] resourceArray = resources.toArray(new String[resources.size()]);
 			query.startGroup();
@@ -270,7 +270,7 @@ public class LoadEventsFunction extends AbstractBrowserFunction {
 		
 		@SuppressWarnings("unchecked")
 		private List<IPeriod> getPeriods(TimeSpan timespan) throws IllegalStateException{
-			logger.debug("Loading timespan " + timespan);
+			logger.debug("Loading timespan " + timespan); //$NON-NLS-1$
 			LocalDate from = timespan.startDate;
 			LocalDate to = timespan.endDate;
 			
@@ -294,15 +294,15 @@ public class LoadEventsFunction extends AbstractBrowserFunction {
 				query.andJoinGroups();
 				query.startGroup();
 				if (from != null) {
-					query.and("tag", COMPARATOR.GREATER_OR_EQUAL, from);
+					query.and("tag", COMPARATOR.GREATER_OR_EQUAL, from); //$NON-NLS-1$
 				}
 				if (to != null) {
-					query.and("tag", COMPARATOR.LESS, to);
+					query.and("tag", COMPARATOR.LESS, to); //$NON-NLS-1$
 				}
 				query.andJoinGroups();
 				return (List<IPeriod>) (List<?>) query.execute();
 			}
-			logger.debug("Loading timespan " + timespan + " finished");
+			logger.debug("Loading timespan " + timespan + " finished"); //$NON-NLS-1$ //$NON-NLS-2$
 			return Collections.emptyList();
 		}
 	}

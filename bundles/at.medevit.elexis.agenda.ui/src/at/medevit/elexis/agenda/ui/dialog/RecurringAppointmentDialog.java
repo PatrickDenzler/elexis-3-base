@@ -81,9 +81,9 @@ public class RecurringAppointmentDialog extends TitleAreaDialog {
 	
 	private boolean noedit;
 	
-	private DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HHmm");
-	private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("ddMMyyyy");
-	private DecimalFormat decimalFormat = new DecimalFormat("00");
+	private DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HHmm"); //$NON-NLS-1$
+	private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("ddMMyyyy"); //$NON-NLS-1$
+	private DecimalFormat decimalFormat = new DecimalFormat("00"); //$NON-NLS-1$
 	
 	public RecurringAppointmentDialog(IAppointmentSeries appointment){
 		super(Display.getDefault().getActiveShell());
@@ -270,10 +270,10 @@ public class RecurringAppointmentDialog extends TitleAreaDialog {
 		
 		txtContactSearch = new Text(groupData, SWT.SEARCH | SWT.ICON_SEARCH);
 		txtContactSearch.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
-		txtContactSearch.setMessage("Vorname, Nachname");
+		txtContactSearch.setMessage(Messages.RecurringAppointmentDialog_3);
 		AsyncContentProposalProvider<IContact> aopp =
 			new AsyncContentProposalProvider<IContact>(
-			"description1", "description2") {
+			"description1", "description2") { //$NON-NLS-1$ //$NON-NLS-2$
 			@Override
 			public IQuery<IContact> createBaseQuery(){
 				return CoreModelServiceHolder.get().getQuery(IContact.class);
@@ -288,7 +288,7 @@ public class RecurringAppointmentDialog extends TitleAreaDialog {
 		ControlDecoration controlDecoration =
 			new ControlDecoration(txtContactSearch, SWT.LEFT | SWT.TOP);
 		controlDecoration.setDescriptionText(
-			"Kontakt Suche nach Vorname, Nachname\noder Freitext Eingabe für Termine ohne Kontakt");
+			Messages.RecurringAppointmentDialog_6);
 		FieldDecoration fieldDecoration = FieldDecorationRegistry.getDefault()
 			.getFieldDecoration(FieldDecorationRegistry.DEC_INFORMATION);
 		controlDecoration.setImage(fieldDecoration.getImage());
@@ -318,7 +318,7 @@ public class RecurringAppointmentDialog extends TitleAreaDialog {
 		lblArea.setText(Messages.SerienTerminDialog_lblArea_text);
 		
 		comboSchedule = new Combo(groupData, SWT.NONE);
-		comboSchedule.setItems(ConfigServiceHolder.get().get("agenda/bereiche", "Praxis").split(","));
+		comboSchedule.setItems(ConfigServiceHolder.get().get("agenda/bereiche", "Praxis").split(",")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 		comboSchedule.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e){
@@ -368,7 +368,7 @@ public class RecurringAppointmentDialog extends TitleAreaDialog {
 		if (appointment.getContact() != null) {
 			setTitle(appointment.getContact().getLabel());
 		} else {
-			setTitle("Kein Kontakt ausgewählt.");
+			setTitle(Messages.RecurringAppointmentDialog_10);
 		}
 		if (appointment.getContact() != null) {
 			txtContactSearch.setText(appointment.getContact().getLabel());
@@ -383,7 +383,7 @@ public class RecurringAppointmentDialog extends TitleAreaDialog {
 			break;
 		case WEEKLY:
 			tabFolderSeriesPattern.setSelection(1);
-			String[] pattern = appointment.getSeriesPatternString().split(",");
+			String[] pattern = appointment.getSeriesPatternString().split(","); //$NON-NLS-1$
 			wsc.getTxtWeekDistance().setText(pattern[0]);
 			if (pattern.length > 1) {
 				for (int i = 0; i < pattern[1].length(); i++) {
@@ -444,35 +444,35 @@ public class RecurringAppointmentDialog extends TitleAreaDialog {
 		IObservableValue observeSelectionDateTimeBeginObserveWidget =
 			WidgetProperties.dateTimeSelection().observe(dateTimeBegin);
 		IObservableValue beginTimeSerienTerminObserveValue =
-			PojoProperties.value("seriesStartTime").observe(appointment);
+			PojoProperties.value("seriesStartTime").observe(appointment); //$NON-NLS-1$
 		bindingContext.bindValue(observeSelectionDateTimeBeginObserveWidget,
 			beginTimeSerienTerminObserveValue, timeTarget2model, timeModel2target);
 		//
 		IObservableValue observeSelectionDateTimeEndObserveWidget =
 			WidgetProperties.dateTimeSelection().observe(dateTimeEnd);
 		IObservableValue endTimeSerienTerminObserveValue =
-			PojoProperties.value("seriesEndTime").observe(appointment);
+			PojoProperties.value("seriesEndTime").observe(appointment); //$NON-NLS-1$
 		bindingContext.bindValue(observeSelectionDateTimeEndObserveWidget,
 			endTimeSerienTerminObserveValue, timeTarget2model, timeModel2target);
 		//
 		IObservableValue observeSelectionDateTimeBeginOfSeriesObserveWidget =
 			WidgetProperties.dateTimeSelection().observe(dateTimeBeginOfSeries);
 		IObservableValue seriesStartDateSerienTerminObserveValue =
-			PojoProperties.value("seriesStartDate").observe(appointment);
+			PojoProperties.value("seriesStartDate").observe(appointment); //$NON-NLS-1$
 		bindingContext.bindValue(observeSelectionDateTimeBeginOfSeriesObserveWidget,
 			seriesStartDateSerienTerminObserveValue, dateTarget2model, dateModel2target);
 		//
 		IObservableValue observeTextTxtReasonObserveWidget =
 			WidgetProperties.text(SWT.Modify).observe(txtReason);
 		IObservableValue reasonSerienTerminObserveValue =
-			PojoProperties.value("reason").observe(appointment);
+			PojoProperties.value("reason").observe(appointment); //$NON-NLS-1$
 		bindingContext.bindValue(observeTextTxtReasonObserveWidget, reasonSerienTerminObserveValue,
 			null, null);
 		
 		IObservableValue observeSelectionDateEndsOnObserveWidget =
 			WidgetProperties.dateTimeSelection().observe(dateEndsOn);
 		IObservableValue endsOnDateSerienTerminObserveValue =
-			PojoProperties.value("seriesEndDate").observe(appointment);
+			PojoProperties.value("seriesEndDate").observe(appointment); //$NON-NLS-1$
 		bindingContext.bindValue(observeSelectionDateEndsOnObserveWidget,
 			endsOnDateSerienTerminObserveValue, dateTarget2model, dateModel2target);
 		
@@ -499,7 +499,7 @@ public class RecurringAppointmentDialog extends TitleAreaDialog {
 		Button button =
 			createButton(parent, IDialogConstants.CANCEL_ID, IDialogConstants.CANCEL_LABEL, false);
 		button.setText(Messages.SerienTerminDialog_other_text);
-		Button button_1 = createButton(parent, IDialogConstants.STOP_ID, "remove series", false);
+		Button button_1 = createButton(parent, IDialogConstants.STOP_ID, "remove series", false); //$NON-NLS-1$
 		button_1.setText(Messages.SerienTerminDialog_other_text_1);
 		
 	}
@@ -549,7 +549,7 @@ public class RecurringAppointmentDialog extends TitleAreaDialog {
 			break;
 		case WEEKLY:
 			StringBuilder sb = new StringBuilder();
-			sb.append(wsc.getTxtWeekDistance().getText() + ",");
+			sb.append(wsc.getTxtWeekDistance().getText() + ","); //$NON-NLS-1$
 			for (int i = 1; i < 8; i++) {
 				if (wsc.getWeekdays()[i].getSelection()) {
 					sb.append(i);
@@ -558,7 +558,7 @@ public class RecurringAppointmentDialog extends TitleAreaDialog {
 			appointment.setSeriesPatternString(sb.toString());
 			break;
 		case MONTHLY:
-			appointment.setSeriesPatternString(msc.getDay() + "");
+			appointment.setSeriesPatternString(msc.getDay() + ""); //$NON-NLS-1$
 			break;
 		case YEARLY:
 			appointment.setSeriesPatternString(

@@ -25,9 +25,9 @@ public class SingleSourceUtil {
 		IS_RAP = clazz != null;
 		
 		if (IS_RAP) {
-			String baseUrl = System.getenv("BASE_URL");
+			String baseUrl = System.getenv("BASE_URL"); //$NON-NLS-1$
 			if (baseUrl == null) {
-				baseUrl = "";
+				baseUrl = ""; //$NON-NLS-1$
 			}
 			HTML_BASE_URL = baseUrl + "/agenda/static/html/"; //$NON-NLS-1$
 		} else {
@@ -75,7 +75,7 @@ public class SingleSourceUtil {
 					try {
 						return browser.execute(script);
 					} catch (IllegalStateException ise) {
-						log.warn("Catched IllegalStateException in script [{}]", script);
+						log.warn("Catched IllegalStateException in script [{}]", script); //$NON-NLS-1$
 					}
 					
 				}

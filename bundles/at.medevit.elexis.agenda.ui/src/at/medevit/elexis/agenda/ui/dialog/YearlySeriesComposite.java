@@ -27,7 +27,7 @@ public class YearlySeriesComposite extends Composite {
 		
 		txtDay = new Text(this, SWT.BORDER);
 		txtDay.setTextLimit(2);
-		txtDay.setText("15");
+		txtDay.setText("15"); //$NON-NLS-1$
 		GridData gd_txtDay = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
 		gd_txtDay.widthHint = 30;
 		txtDay.setLayoutData(gd_txtDay);
@@ -38,7 +38,7 @@ public class YearlySeriesComposite extends Composite {
 		
 		txtMonth = new Text(this, SWT.BORDER);
 		txtMonth.setTextLimit(2);
-		txtMonth.setText("6");
+		txtMonth.setText("6"); //$NON-NLS-1$
 		GridData gd_txtMonth = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
 		gd_txtMonth.widthHint = 30;
 		txtMonth.setLayoutData(gd_txtMonth);
@@ -54,7 +54,7 @@ public class YearlySeriesComposite extends Composite {
 	}
 	
 	public void setDay(int day){
-		txtDay.setText(day + "");
+		txtDay.setText(day + ""); //$NON-NLS-1$
 	}
 	
 	public int getMonth(){
@@ -62,6 +62,6 @@ public class YearlySeriesComposite extends Composite {
 	}
 	
 	public void setMonth(int month){
-		txtMonth.setText(month + "");
+		txtMonth.setText(month + ""); //$NON-NLS-1$
 	}
 }

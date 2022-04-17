@@ -37,9 +37,9 @@ public class DeleteHandler {
 		Optional<IPeriod> period = getSelectedPeriod();
 		
 		period.ifPresent(p -> {
-			if (MessageDialog.openConfirm(shell, "Löschen",
-				"Wollen Sie " + period.get().getLabel()
-					+ " wirklich löschen?")) {
+			if (MessageDialog.openConfirm(shell, Messages.DeleteHandler_0,
+				Messages.DeleteHandler_1 + period.get().getLabel()
+					+ Messages.DeleteHandler_2)) {
 				AcquireLockBlockingUi.aquireAndRun(p, new ILockHandler() {
 					@Override
 					public void lockFailed(){
@@ -50,8 +50,8 @@ public class DeleteHandler {
 					public void lockAcquired(){
 						IAppointment appointment = (IAppointment) p;
 						if (appointment.isRecurring()) {
-							if (MessageDialog.openQuestion(shell, "Löschen",
-								"Wollen Sie die gesamte Serie löschen?")) {
+							if (MessageDialog.openQuestion(shell, Messages.DeleteHandler_3,
+								Messages.DeleteHandler_4)) {
 								appointmentService.delete(appointment, true);
 							} else {
 								appointmentService.delete(appointment, false);
@@ -79,7 +79,7 @@ public class DeleteHandler {
 				}
 			}
 		} catch (Exception e) {
-			LoggerFactory.getLogger(getClass()).error("Error setting status", e);
+			LoggerFactory.getLogger(getClass()).error("Error setting status", e); //$NON-NLS-1$
 		}
 		return Optional.empty();
 	}

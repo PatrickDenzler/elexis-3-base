@@ -94,15 +94,15 @@ public class SideBarComposite extends Composite {
 		setLayout(new GridLayout(1, true));
 		
 		menuManager = new ToolBarManager(SWT.FLAT | SWT.HORIZONTAL);
-		menuManager.add(new Action(">", Action.AS_PUSH_BUTTON) {
+		menuManager.add(new Action(">", Action.AS_PUSH_BUTTON) { //$NON-NLS-1$
 			@Override
 			public void run(){
-				if (">".equals(super.getText())) {
+				if (">".equals(super.getText())) { //$NON-NLS-1$
 					showContent();
-					super.setText("<");
+					super.setText("<"); //$NON-NLS-1$
 				} else {
 					hideContent();
-					super.setText(">");
+					super.setText(">"); //$NON-NLS-1$
 				}
 				super.run();
 			}
@@ -124,7 +124,7 @@ public class SideBarComposite extends Composite {
 			FontDescriptor.createFrom(label.getFont()).setStyle(SWT.BOLD);
 		Font boldFont = boldDescriptor.createFont(label.getDisplay());
 		label.setFont(boldFont);
-		label.setText("Bereiche");
+		label.setText(Messages.SideBarComposite_4);
 		ScrolledComposite areaScrolledComposite = new ScrolledComposite(this, SWT.V_SCROLL);
 		areaScrolledComposite.setLayout(new FillLayout());
 		areaScrolledComposite.setExpandVertical(true);
@@ -160,7 +160,7 @@ public class SideBarComposite extends Composite {
 		
 		label = new Label(this, SWT.NONE);
 		label.setFont(boldFont);
-		label.setText("Zeitschritte");
+		label.setText(Messages.SideBarComposite_5);
 		spanSizeCombo = new ComboViewer(this, SWT.BORDER);
 		spanSizeCombo.setContentProvider(ArrayContentProvider.getInstance());
 		spanSizeCombo.setLabelProvider(new LabelProvider() {
@@ -178,7 +178,7 @@ public class SideBarComposite extends Composite {
 					if (!selection.isEmpty()) {
 						agendaComposite.setSelectedSpanSize(
 							(AgendaSpanSize) ((StructuredSelection) selection).getFirstElement());
-						saveConfigurationString("selectedSpanSize",
+						saveConfigurationString("selectedSpanSize", //$NON-NLS-1$
 							((AgendaSpanSize) ((StructuredSelection) selection).getFirstElement())
 								.name());
 					}
@@ -188,13 +188,13 @@ public class SideBarComposite extends Composite {
 		
 		label = new Label(this, SWT.NONE);
 		label.setFont(boldFont);
-		label.setText("Auto. zu jetzt scrollen");
+		label.setText(Messages.SideBarComposite_7);
 		scrollToNowCheck = new Button(this, SWT.CHECK);
 		scrollToNowCheck.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e){
 				agendaComposite.setScrollToNow(scrollToNowCheck.getSelection());
-				saveConfigurationString("scrollToNow",
+				saveConfigurationString(Messages.SideBarComposite_8,
 					Boolean.toString(scrollToNowCheck.getSelection()));
 				super.widgetSelected(e);
 			}
@@ -204,7 +204,7 @@ public class SideBarComposite extends Composite {
 		separator.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
 		
 		Button btn = new Button(this, SWT.NONE);
-		btn.setText("Neue Serie anlegen");
+		btn.setText(Messages.SideBarComposite_9);
 		btn.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e){
@@ -219,7 +219,7 @@ public class SideBarComposite extends Composite {
 		if (includeMove) {
 			label = new Label(this, SWT.NONE);
 			label.setFont(boldFont);
-			label.setText("Termin verschieben");
+			label.setText(Messages.SideBarComposite_10);
 			label.setLayoutData(new GridData(SWT.FILL, SWT.BOTTOM, true, true));
 			moveTable = new TableViewer(this, SWT.MULTI);
 			moveTable.getTable().setLayoutData(new GridData(SWT.FILL, SWT.BOTTOM, true, false));
@@ -237,7 +237,7 @@ public class SideBarComposite extends Composite {
 			menuManager.add(new Action() {
 				@Override
 				public String getText(){
-					return "verschieben abbrechen";
+					return Messages.SideBarComposite_11;
 				}
 				
 				@Override
@@ -323,13 +323,13 @@ public class SideBarComposite extends Composite {
 		this.agendaComposite = agendaComposite;
 		loadSelectedResources();
 		agendaComposite.setSelectedResources(selectedResources);
-		String selectedSpanSize = loadConfigurationString("selectedSpanSize");
+		String selectedSpanSize = loadConfigurationString("selectedSpanSize"); //$NON-NLS-1$
 		if (!selectedSpanSize.isEmpty()) {
 			spanSizeCombo
 				.setSelection(new StructuredSelection(AgendaSpanSize.valueOf(selectedSpanSize)));
 		}
-		String value = loadConfigurationString("scrollToNow");
-		if (value != null && value.equalsIgnoreCase("true")) {
+		String value = loadConfigurationString("scrollToNow"); //$NON-NLS-1$
+		if (value != null && value.equalsIgnoreCase("true")) { //$NON-NLS-1$
 			scrollToNowCheck.setSelection(true);
 			agendaComposite.setScrollToNow(true);
 		}
@@ -340,16 +340,16 @@ public class SideBarComposite extends Composite {
 		StringBuilder sb = new StringBuilder();
 		for (String resource : selectedResources) {
 			if (sb.length() > 0) {
-				sb.append("|");
+				sb.append("|"); //$NON-NLS-1$
 			}
 			sb.append(resource);
 		}
-		saveConfigurationString("selectedResources", sb.toString());
+		saveConfigurationString(Messages.SideBarComposite_16, sb.toString());
 	}
 	
 	private void loadSelectedResources(){
-		String loadedResources = loadConfigurationString("selectedResources");
-		String[] parts = loadedResources.split("\\|");
+		String loadedResources = loadConfigurationString("selectedResources"); //$NON-NLS-1$
+		String[] parts = loadedResources.split("\\|"); //$NON-NLS-1$
 		if (parts.length > 0 && !parts[0].isEmpty()) {
 			selectedResources.clear();
 			selectedResources.addAll(Arrays.asList(parts));
@@ -371,13 +371,13 @@ public class SideBarComposite extends Composite {
 	
 	private void saveConfigurationString(String configKey, String value){
 		ConfigServiceHolder.get().setActiveUserContact(
-			"at.medevit.elexis.agenda.ui/" + agendaComposite.getConfigId() + "/" + configKey,
+			"at.medevit.elexis.agenda.ui/" + agendaComposite.getConfigId() + "/" + configKey, //$NON-NLS-1$ //$NON-NLS-2$
 			value);
 	}
 	
 	private String loadConfigurationString(String configKey){
 		return ConfigServiceHolder.get().getActiveUserContact(
-			"at.medevit.elexis.agenda.ui/" + agendaComposite.getConfigId() + "/" + configKey, "");
+			"at.medevit.elexis.agenda.ui/" + agendaComposite.getConfigId() + "/" + configKey, ""); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 	}
 	
 	public void addMovePeriod(IPeriod period){

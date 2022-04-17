@@ -44,11 +44,11 @@ public class PdfFunction extends BrowserFunction {
 	
 	private void callPdf(){
 		ParameterizedCommand command =
-			commandService.createCommand("at.medevit.elexis.agenda.ui.PrintSelectedAgenda", null);
+			commandService.createCommand("at.medevit.elexis.agenda.ui.PrintSelectedAgenda", null); //$NON-NLS-1$
 		if (command != null) {
 			handlerService.executeHandler(command);
 		} else {
-			LoggerFactory.getLogger(getClass()).error("Command not found");
+			LoggerFactory.getLogger(getClass()).error("Command not found"); //$NON-NLS-1$
 		}
 	}
 }

@@ -2,8 +2,9 @@ package at.medevit.elexis.agenda.ui.dialog;
 
 
 import org.eclipse.osgi.util.NLS;
+
 public class Messages{
-	public static final String BUNDLE_NAME = "at.medevit.elexis.agenda.ui.dialog.messages";
+	public static final String BUNDLE_NAME = "at.medevit.elexis.agenda.ui.dialog.messages"; //$NON-NLS-1$
     public static String SerienTerminDialog = ch.elexis.core.l10n.Messages.SerienTerminDialog;
     public static String MonthlySeriesComposite_lblAtThe_text = ch.elexis.core.l10n.Messages.MonthlySeriesComposite_lblAtThe_text;
     public static String SerienTerminDialog_beginOfSeries_text = ch.elexis.core.l10n.Messages.SerienTerminDialog_beginOfSeries_text;
@@ -47,6 +48,9 @@ public class Messages{
     public static String SerienTermin_thursday = ch.elexis.core.l10n.Messages.SerienTermin_thursday;
     public static String SerienTermin_tuesday = ch.elexis.core.l10n.Messages.SerienTermin_tuesday;
     public static String SerienTermin_wednesday = ch.elexis.core.l10n.Messages.SerienTermin_wednesday;
+	public static String RecurringAppointmentDialog_3;
+	public static String RecurringAppointmentDialog_6;
+	public static String RecurringAppointmentDialog_10;
 
 }
 

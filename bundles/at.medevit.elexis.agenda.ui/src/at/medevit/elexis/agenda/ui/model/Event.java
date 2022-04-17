@@ -18,7 +18,7 @@ import ch.elexis.core.types.AppointmentType;
  *
  */
 public class Event {
-	private static final String DEFAULT_BG_COLOR = "ffffff";
+	private static final String DEFAULT_BG_COLOR = "ffffff"; //$NON-NLS-1$
 	
 	private String id;
 	private String title;
@@ -141,7 +141,7 @@ public class Event {
 			if (termin.isRecurring()
 				&& (rootTermin = new RecurringAppointment(termin, CoreModelServiceHolder.get())
 					.getRootAppoinemtent()) != null) {
-				ret.icon = "ui-icon-arrowrefresh-1-w";
+				ret.icon = "ui-icon-arrowrefresh-1-w"; //$NON-NLS-1$
 				ret.title = rootTermin.getSubjectOrPatient();
 			}
 			else {
@@ -149,11 +149,11 @@ public class Event {
 			}
 			// fullcalendar will no create title html div if no title is blank, add space
 			if (ret.title.isEmpty()) {
-				ret.title = " ";
+				ret.title = " "; //$NON-NLS-1$
 			}
 			ret.description =
-				termin.getReason().replaceAll("\n", "<br />") + "<br /><br />" + termin
-					.getStateHistoryFormatted("dd.MM.yyyy HH:mm:ss").replaceAll("\n", "<br />");
+				termin.getReason().replaceAll("\n", "<br />") + "<br /><br />" + termin //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
+					.getStateHistoryFormatted("dd.MM.yyyy HH:mm:ss").replaceAll("\n", "<br />"); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 			ret.borderColor = getStateColor(userContact, iPeriod);
 			ret.backgroundColor = getTypColor(userContact, iPeriod);
 			ret.textColor = getTextColor(ret.backgroundColor.substring(1));
@@ -190,10 +190,10 @@ public class Event {
 	public static String getTypColor(IContact userContact, IPeriod iPeriod){
 		if (iPeriod instanceof IAppointment) {
 			IAppointment termin = (IAppointment) iPeriod;
-			return "#" + ConfigServiceHolder.get()
+			return "#" + ConfigServiceHolder.get() //$NON-NLS-1$
 				.get(userContact, "agenda/farben/typ/" + termin.getType(), DEFAULT_BG_COLOR); //$NON-NLS-1$
 		}
-		return "#" + DEFAULT_BG_COLOR;
+		return "#" + DEFAULT_BG_COLOR; //$NON-NLS-1$
 	}
 	
 	/**
@@ -206,10 +206,10 @@ public class Event {
 	public static String getStateColor(IContact userContact, IPeriod iPeriod){
 		if (iPeriod instanceof IAppointment) {
 			IAppointment termin = (IAppointment) iPeriod;
-			return "#" + ConfigServiceHolder.get().get(userContact,
-				"agenda/farben/status/" + termin.getState(), DEFAULT_BG_COLOR); //$NON-NLS-2$
+			return "#" + ConfigServiceHolder.get().get(userContact, //$NON-NLS-1$
+				"agenda/farben/status/" + termin.getState(), DEFAULT_BG_COLOR); //$NON-NLS-2$ //$NON-NLS-1$ //$NON-NLS-1$
 		}
-		return "#" + DEFAULT_BG_COLOR;
+		return "#" + DEFAULT_BG_COLOR; //$NON-NLS-1$
 	}
 	
 	/**
@@ -224,7 +224,7 @@ public class Event {
 			Integer.parseInt(bgColor.substring(2, 4), 16),
 			Integer.parseInt(bgColor.substring(4, 6), 16));
 		
-		return brightness > 130 ? "#000000" : "#ffffff";
+		return brightness > 130 ? "#000000" : "#ffffff"; //$NON-NLS-1$ //$NON-NLS-2$
 	}
 	
 	private static int getPerceivedBrightness(int red, int green, int blue){
