@@ -11,8 +11,7 @@ package ch.elexis.buchhaltung.basis;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-  private static final String BUNDLE_NAME = "ch.elexis.buchhaltung.basis.messages";
+public class Messages{
     public static String AlleLeistungen_ActivityText = ch.elexis.core.l10n.Messages.AlleLeistungen_ActivityText;
     public static String AlleLeistungen_BillState = ch.elexis.core.l10n.Messages.AlleLeistungen_BillState;
     public static String AlleLeistungen_Description = ch.elexis.core.l10n.Messages.AlleLeistungen_Description;
@@ -83,7 +82,4 @@ public class Messages extends NLS {
     public static String ZahlungsJournal_Type = ch.elexis.core.l10n.Messages.ZahlungsJournal_Type;
     public static String ZahlungsJournal_ZA = ch.elexis.core.l10n.Messages.ZahlungsJournal_ZA;
 
-    static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 }

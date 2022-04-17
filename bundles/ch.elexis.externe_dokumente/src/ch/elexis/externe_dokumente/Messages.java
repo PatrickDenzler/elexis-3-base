@@ -11,8 +11,7 @@ package ch.elexis.externe_dokumente;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-  private static final String BUNDLE_NAME = "ch.elexis.externe_dokumente.messages";
+public class Messages{
     public static String ExterneDokumente_Concerns = ch.elexis.core.l10n.Messages.ExterneDokumente_Concerns;
     public static String ExterneDokumente_OpenFileTip = ch.elexis.core.l10n.Messages.ExterneDokumente_OpenFileTip;
     public static String ExterneDokumente_click_to_sort_by_date = ch.elexis.core.l10n.Messages.ExterneDokumente_click_to_sort_by_date;
@@ -66,7 +65,4 @@ public class Messages extends NLS {
     public static String VerifierDialog_name = ch.elexis.core.l10n.Messages.VerifierDialog_name;
     public static String VerifierDialog_verify_job_name = ch.elexis.core.l10n.Messages.VerifierDialog_verify_job_name;
 
-    static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 }

@@ -11,8 +11,7 @@ package ch.elexis.base.ch.arzttarife;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-	private static final String BUNDLE_NAME = "ch.elexis.base.ch.arzttarife.messages"; //$NON-NLS-1$
+public class Messages{
     public static String LaborleistungDetailDisplay_analyse = ch.elexis.core.l10n.Messages.LaborleistungDetailDisplay_analyse;
     public static String LaborleistungImporter_AnalyseImport = ch.elexis.core.l10n.Messages.LaborleistungImporter_AnalyseImport;
     public static String LaborleistungImporter_AnalyzeTariff = ch.elexis.core.l10n.Messages.LaborleistungImporter_AnalyzeTariff;
@@ -239,8 +238,4 @@ public class Messages extends NLS {
     public static String XMLExporter_TarmedForTrustCenter = ch.elexis.core.l10n.Messages.XMLExporter_TarmedForTrustCenter;
     public static String XMLExporter_Unknown = ch.elexis.core.l10n.Messages.XMLExporter_Unknown;
     public static String XMLExporter_unknown = ch.elexis.core.l10n.Messages.XMLExporter_unknown;
-	static { // load message values from bundle file
-		NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-	}
-	
-	private Messages(){}}
+}

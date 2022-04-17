@@ -11,8 +11,7 @@ package ch.elexis.laborimport.viollier.v2;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-  private static final String BUNDLE_NAME = "ch.elexis.laborimport.viollier.v2.messages";
+public class Messages{
     public static String LabOrderImport_AllFiles = ch.elexis.core.l10n.Messages.LabOrderImport_AllFiles;
     public static String LabOrderImport_AutomaticMedTransfer = ch.elexis.core.l10n.Messages.LabOrderImport_AutomaticMedTransfer;
     public static String LabOrderImport_Browse = ch.elexis.core.l10n.Messages.LabOrderImport_Browse;
@@ -90,7 +89,4 @@ public class Messages extends NLS {
     public static String Preferences_UseGlobalSettings = ch.elexis.core.l10n.Messages.Preferences_UseGlobalSettings;
     public static String Preferences_undefiniert = ch.elexis.core.l10n.Messages.Preferences_undefiniert;
 
-    static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 }

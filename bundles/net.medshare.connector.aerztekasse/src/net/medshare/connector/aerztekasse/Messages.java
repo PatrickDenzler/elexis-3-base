@@ -11,8 +11,7 @@ package net.medshare.connector.aerztekasse;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-  private static final String BUNDLE_NAME = "net.medshare.connector.aerztekasse.messages";
+public class Messages{
     public static String InvoiceOutputter_ChangeDir = ch.elexis.core.l10n.Messages.InvoiceOutputter_ChangeDir;
     public static String InvoiceOutputter_DoExport = ch.elexis.core.l10n.Messages.InvoiceOutputter_DoExport;
     public static String InvoiceOutputter_Error = ch.elexis.core.l10n.Messages.InvoiceOutputter_Error;
@@ -42,7 +41,4 @@ public class Messages extends NLS {
     public static String XMLExporter_ErrorInBill = ch.elexis.core.l10n.Messages.XMLExporter_ErrorInBill;
     public static String XMLExporter_PleaseEnterOutputDirectoryForBills = ch.elexis.core.l10n.Messages.XMLExporter_PleaseEnterOutputDirectoryForBills;
 
-    static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 }

@@ -11,8 +11,7 @@ package ch.elexis.omnivore.ui;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-  private static final String BUNDLE_NAME = "ch.elexis.omnivore.ui.messages";
+public class Messages{
     public static String DocHandle_cantReadCaption = ch.elexis.core.l10n.Messages.DocHandle_cantReadCaption;
     public static String DocHandle_configErrorCaption = ch.elexis.core.l10n.Messages.DocHandle_configErrorCaption;
     public static String DocHandle_configErrorText = ch.elexis.core.l10n.Messages.DocHandle_configErrorText;
@@ -28,7 +27,7 @@ public class Messages extends NLS {
     public static String DocHandle_readErrorCaption = ch.elexis.core.l10n.Messages.DocHandle_readErrorCaption;
     public static String FileImportDialog_categoryLabel = ch.elexis.core.l10n.Messages.FileImportDialog_categoryLabel;
     public static String FileImportDialog_dateLabel = ch.elexis.core.l10n.Messages.FileImportDialog_dateLabel;
-	public static String FileImportDialog_dateOriginLabel = ch.elexis.core.l10n.Messages.FileImportDialog_dateOriginLabel;
+    public static String FileImportDialog_dateOriginLabel = ch.elexis.core.l10n.Messages.FileImportDialog_dateOriginLabel;
     public static String FileImportDialog_importCaption = ch.elexis.core.l10n.Messages.FileImportDialog_importCaption;
     public static String FileImportDialog_importFileCaption = ch.elexis.core.l10n.Messages.FileImportDialog_importFileCaption;
     public static String FileImportDialog_importFileText = ch.elexis.core.l10n.Messages.FileImportDialog_importFileText;
@@ -41,7 +40,7 @@ public class Messages extends NLS {
     public static String OmnivoreView_configErrorText = ch.elexis.core.l10n.Messages.OmnivoreView_configErrorText;
     public static String OmnivoreView_dataSources = ch.elexis.core.l10n.Messages.OmnivoreView_dataSources;
     public static String OmnivoreView_dateColumn = ch.elexis.core.l10n.Messages.OmnivoreView_dateColumn;
-	public static String OmnivoreView_dateOriginColumn = ch.elexis.core.l10n.Messages.OmnivoreView_dateOriginColumn;
+    public static String OmnivoreView_dateOriginColumn = ch.elexis.core.l10n.Messages.OmnivoreView_dateOriginColumn;
     public static String OmnivoreView_deleteActionCaption = ch.elexis.core.l10n.Messages.OmnivoreView_deleteActionCaption;
     public static String OmnivoreView_deleteActionToolTip = ch.elexis.core.l10n.Messages.OmnivoreView_deleteActionToolTip;
     public static String OmnivoreView_editActionCaption = ch.elexis.core.l10n.Messages.OmnivoreView_editActionCaption;
@@ -83,9 +82,6 @@ public class Messages extends NLS {
     public static String Preferences_omnivore = ch.elexis.core.l10n.Messages.Preferences_omnivore;
     public static String Preferences_pathForDocs = ch.elexis.core.l10n.Messages.Preferences_pathForDocs;
     public static String Preferences_storeInFS = ch.elexis.core.l10n.Messages.Preferences_storeInFS;
-	public static String DocHandle_runErrorHeading = ch.elexis.core.l10n.Messages.DocHandle_runErrorHeading;
+    public static String DocHandle_runErrorHeading = ch.elexis.core.l10n.Messages.DocHandle_runErrorHeading;
 
-    static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 }

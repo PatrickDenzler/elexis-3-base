@@ -11,8 +11,7 @@ package ch.elexis.laborimport.medics.v2;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-  private static final String BUNDLE_NAME = "ch.elexis.laborimport.medics.v2.messages";
+public class Messages{
     public static String KontaktOrderManagement_messageErrorCreateDB = ch.elexis.core.l10n.Messages.KontaktOrderManagement_messageErrorCreateDB;
     public static String KontaktOrderManagement_titleErrorCreateDB = ch.elexis.core.l10n.Messages.KontaktOrderManagement_titleErrorCreateDB;
     public static String LabOrderAction_errorMessageNoFallSelected = ch.elexis.core.l10n.Messages.LabOrderAction_errorMessageNoFallSelected;
@@ -50,7 +49,4 @@ public class Messages extends NLS {
     public static String PatientLabor_nameMedicsLabor = ch.elexis.core.l10n.Messages.PatientLabor_nameMedicsLabor;
     public static String iMedAction_nameAction = ch.elexis.core.l10n.Messages.iMedAction_nameAction;
 
-    static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 }

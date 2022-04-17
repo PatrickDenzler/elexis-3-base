@@ -11,8 +11,7 @@ package ch.elexis.impfplan;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-  private static final String BUNDLE_NAME = "ch.elexis.impfplan.messages";
+public class Messages{
     public static String AddVaccinationDialog_dateOnlyAbout = ch.elexis.core.l10n.Messages.AddVaccinationDialog_dateOnlyAbout;
     public static String AddVaccinationDialog_enterVaccinationText = ch.elexis.core.l10n.Messages.AddVaccinationDialog_enterVaccinationText;
     public static String AddVaccinationDialog_enterVaccinationTextError = ch.elexis.core.l10n.Messages.AddVaccinationDialog_enterVaccinationTextError;
@@ -50,7 +49,4 @@ public class Messages extends NLS {
     public static String ImpfplanView_vaccinationsDOne = ch.elexis.core.l10n.Messages.ImpfplanView_vaccinationsDOne;
     public static String ImpfplanView_vaccinationsRecommended = ch.elexis.core.l10n.Messages.ImpfplanView_vaccinationsRecommended;
 
-    static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 }

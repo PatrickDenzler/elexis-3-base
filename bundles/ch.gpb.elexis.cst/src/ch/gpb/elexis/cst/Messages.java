@@ -11,8 +11,7 @@ package ch.gpb.elexis.cst;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-  private static final String BUNDLE_NAME = "ch.gpb.elexis.cst.messages";
+public class Messages{
     public static String AnzeigeOptionsComposite_lblWoSindMeine_text = ch.elexis.core.l10n.Messages.AnzeigeOptionsComposite_lblWoSindMeine_text;
     public static String Button_MoveDown = ch.elexis.core.l10n.Messages.Button_MoveDown;
     public static String Button_MoveUp = ch.elexis.core.l10n.Messages.Button_MoveUp;
@@ -187,7 +186,4 @@ public class Messages extends NLS {
     public static String TemplateComposite_template_settings = ch.elexis.core.l10n.Messages.TemplateComposite_template_settings;
     public static String TemplateComposite_template_title = ch.elexis.core.l10n.Messages.TemplateComposite_template_title;
 
-    static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 }

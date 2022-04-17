@@ -11,8 +11,7 @@ package ch.unibe.iam.scg.archie;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-  private static final String BUNDLE_NAME = "ch.unibe.iam.scg.archie.messages"; //$NON-NLS-1$
+public class Messages{
     public static String ACL_ACCESS = ch.elexis.core.l10n.Messages.ACL_ACCESS;
     public static String ACL_ACCESS_DENIED = ch.elexis.core.l10n.Messages.ACL_ACCESS_DENIED;
     public static String ACTION_EXPORT_DESCRIPTION = ch.elexis.core.l10n.Messages.ACTION_EXPORT_DESCRIPTION;
@@ -94,7 +93,4 @@ public class Messages extends NLS {
     public static String CreateChart = ch.elexis.core.l10n.Messages.CreateChart;
     public static String RefreshChart = ch.elexis.core.l10n.Messages.RefreshChart;
 
-    static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 }

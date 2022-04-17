@@ -11,8 +11,7 @@ package ch.elexis.base.ch.labortarif_2009;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-  private static final String BUNDLE_NAME = "ch.elexis.base.ch.labortarif_2009.messages"; //$NON-NLS-1$
+public class Messages{
     public static String DetailDisplay_chapter = ch.elexis.core.l10n.Messages.DetailDisplay_chapter;
     public static String DetailDisplay_code = ch.elexis.core.l10n.Messages.DetailDisplay_code;
     public static String DetailDisplay_fachbereich = ch.elexis.core.l10n.Messages.DetailDisplay_fachbereich;
@@ -29,7 +28,4 @@ public class Messages extends NLS {
     public static String Preferences_pleaseEnterMultiplier = ch.elexis.core.l10n.Messages.Preferences_pleaseEnterMultiplier;
     public static String Preferences_specialities = ch.elexis.core.l10n.Messages.Preferences_specialities;
 
-    static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 }

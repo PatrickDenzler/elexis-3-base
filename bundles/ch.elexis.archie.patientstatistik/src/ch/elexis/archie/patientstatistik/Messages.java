@@ -14,23 +14,17 @@ package ch.elexis.archie.patientstatistik;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-	private static final String BUNDLE_NAME = "ch.elexis.archie.patientstatistik.messages"; //$NON-NLS-1$
-	public static String VerrechnungsStatistikView_AllFiles = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_AllFiles;
-	public static String VerrechnungsStatistikView_AMOUNT = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_AMOUNT;
-	public static String VerrechnungsStatistikView_CODE = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_CODE;
-	public static String VerrechnungsStatistikView_CODESYSTEM = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_CODESYSTEM;
-	public static String VerrechnungsStatistikView_ExportToCSV = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_ExportToCSV;
-	public static String VerrechnungsStatistikView_NoPatientSelected = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_NoPatientSelected;
-	public static String VerrechnungsStatistikView_NUMBER = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_NUMBER;
-	public static String VerrechnungsStatistikView_REFRESH = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_REFRESH;
-	public static String VerrechnungsStatistikView_SUM = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_SUM;
-	public static String VerrechnungsStatistikView_SUMTOTAL = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_SUMTOTAL;
-	public static String VerrechnungsStatistikView_TEXT = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_TEXT;
-	static {
-		// initialize resource bundle
-		NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-	}
-	
-	private Messages(){}
+public class Messages{
+    public static String VerrechnungsStatistikView_AllFiles = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_AllFiles;
+    public static String VerrechnungsStatistikView_AMOUNT = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_AMOUNT;
+    public static String VerrechnungsStatistikView_CODE = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_CODE;
+    public static String VerrechnungsStatistikView_CODESYSTEM = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_CODESYSTEM;
+    public static String VerrechnungsStatistikView_ExportToCSV = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_ExportToCSV;
+    public static String VerrechnungsStatistikView_NoPatientSelected = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_NoPatientSelected;
+    public static String VerrechnungsStatistikView_NUMBER = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_NUMBER;
+    public static String VerrechnungsStatistikView_REFRESH = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_REFRESH;
+    public static String VerrechnungsStatistikView_SUM = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_SUM;
+    public static String VerrechnungsStatistikView_SUMTOTAL = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_SUMTOTAL;
+    public static String VerrechnungsStatistikView_TEXT = ch.elexis.core.l10n.Messages.VerrechnungsStatistikView_TEXT;
+
 }

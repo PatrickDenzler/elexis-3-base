@@ -11,8 +11,7 @@ package ch.elexis.base.ch.ebanking;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-  private static final String BUNDLE_NAME = "ch.elexis.base.ch.ebanking.messages"; //$NON-NLS-1$
+public class Messages{
     public static String ESRFile_ExceptionParsing = ch.elexis.core.l10n.Messages.ESRFile_ExceptionParsing;
     public static String ESRFile_cannot_read_esr = ch.elexis.core.l10n.Messages.ESRFile_cannot_read_esr;
     public static String ESRFile_esrfile_not_founde = ch.elexis.core.l10n.Messages.ESRFile_esrfile_not_founde;
@@ -84,7 +83,4 @@ public class Messages extends NLS {
     public static String ESR_warning_esr_not_correct = ch.elexis.core.l10n.Messages.ESR_warning_esr_not_correct;
     public static String LoadESRFileHandler_notAssignable = ch.elexis.core.l10n.Messages.LoadESRFileHandler_notAssignable;
 
-    static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 }

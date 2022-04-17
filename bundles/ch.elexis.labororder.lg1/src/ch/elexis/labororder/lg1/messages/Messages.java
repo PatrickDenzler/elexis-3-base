@@ -11,8 +11,7 @@ package ch.elexis.labororder.lg1.messages;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-	private static final String BUNDLE_NAME = "ch.elexis.labororder.lg1.messages.messages";
+public class Messages{
     public static String LabOrderAction_errorMessageNoFallSelected = ch.elexis.core.l10n.Messages.LabOrderAction_errorMessageNoFallSelected;
     public static String LabOrderAction_errorMessageNoPatientSelected = ch.elexis.core.l10n.Messages.LabOrderAction_errorMessageNoPatientSelected;
     public static String LabOrderAction_errorTitleCannotCreateHL7 = ch.elexis.core.l10n.Messages.LabOrderAction_errorTitleCannotCreateHL7;
@@ -24,9 +23,6 @@ public class Messages extends NLS {
     public static String LabOrderAction_nameAction = ch.elexis.core.l10n.Messages.LabOrderAction_nameAction;
     public static String LabOrderAction_receivingApplication = ch.elexis.core.l10n.Messages.LabOrderAction_receivingApplication;
     public static String LabOrderAction_receivingFacility = ch.elexis.core.l10n.Messages.LabOrderAction_receivingFacility;
-	public static String Lg1PreferencePage_labelUploadDir = ch.elexis.core.l10n.Messages.Lg1PreferencePage_labelUploadDir;
+    public static String Lg1PreferencePage_labelUploadDir = ch.elexis.core.l10n.Messages.Lg1PreferencePage_labelUploadDir;
 
-    static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 }

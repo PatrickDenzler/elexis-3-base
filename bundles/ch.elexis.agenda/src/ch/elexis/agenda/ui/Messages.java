@@ -13,26 +13,19 @@ package ch.elexis.agenda.ui;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-	private static final String BUNDLE_NAME = "ch.elexis.agenda.ui.messages"; //$NON-NLS-1$
-	public static String AgendaParallel_dayBack = ch.elexis.core.l10n.Messages.AgendaParallel_dayBack;
-	public static String AgendaParallel_dayForward = ch.elexis.core.l10n.Messages.AgendaParallel_dayForward;
-	public static String AgendaParallel_selectDay = ch.elexis.core.l10n.Messages.AgendaParallel_selectDay;
-	public static String AgendaParallel_setZoomFactor = ch.elexis.core.l10n.Messages.AgendaParallel_setZoomFactor;
-	public static String AgendaParallel_showCalendarForSelcetion = ch.elexis.core.l10n.Messages.AgendaParallel_showCalendarForSelcetion;
-	public static String AgendaParallel_showNextDay = ch.elexis.core.l10n.Messages.AgendaParallel_showNextDay;
-	public static String AgendaParallel_showPreviousDay = ch.elexis.core.l10n.Messages.AgendaParallel_showPreviousDay;
-	public static String AgendaParallel_zoom = ch.elexis.core.l10n.Messages.AgendaParallel_zoom;
-	public static String ColumnHeader_Mandantors = ch.elexis.core.l10n.Messages.ColumnHeader_Mandantors;
-	public static String ColumnHeader_mandatorsForParallelView = ch.elexis.core.l10n.Messages.ColumnHeader_mandatorsForParallelView;
-	public static String ColumnHeader_selectMandators = ch.elexis.core.l10n.Messages.ColumnHeader_selectMandators;
-	public static String ColumnHeader_selectMandatorToShow = ch.elexis.core.l10n.Messages.ColumnHeader_selectMandatorToShow;
-	public static String TerminListView_noPatientSelected = ch.elexis.core.l10n.Messages.TerminListView_noPatientSelected;
-	
-	static {
-		// initialize resource bundle
-		NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-	}
-	
-	private Messages(){}
+public class Messages{
+    public static String AgendaParallel_dayBack = ch.elexis.core.l10n.Messages.AgendaParallel_dayBack;
+    public static String AgendaParallel_dayForward = ch.elexis.core.l10n.Messages.AgendaParallel_dayForward;
+    public static String AgendaParallel_selectDay = ch.elexis.core.l10n.Messages.AgendaParallel_selectDay;
+    public static String AgendaParallel_setZoomFactor = ch.elexis.core.l10n.Messages.AgendaParallel_setZoomFactor;
+    public static String AgendaParallel_showCalendarForSelcetion = ch.elexis.core.l10n.Messages.AgendaParallel_showCalendarForSelcetion;
+    public static String AgendaParallel_showNextDay = ch.elexis.core.l10n.Messages.AgendaParallel_showNextDay;
+    public static String AgendaParallel_showPreviousDay = ch.elexis.core.l10n.Messages.AgendaParallel_showPreviousDay;
+    public static String AgendaParallel_zoom = ch.elexis.core.l10n.Messages.AgendaParallel_zoom;
+    public static String ColumnHeader_Mandantors = ch.elexis.core.l10n.Messages.ColumnHeader_Mandantors;
+    public static String ColumnHeader_mandatorsForParallelView = ch.elexis.core.l10n.Messages.ColumnHeader_mandatorsForParallelView;
+    public static String ColumnHeader_selectMandators = ch.elexis.core.l10n.Messages.ColumnHeader_selectMandators;
+    public static String ColumnHeader_selectMandatorToShow = ch.elexis.core.l10n.Messages.ColumnHeader_selectMandatorToShow;
+    public static String TerminListView_noPatientSelected = ch.elexis.core.l10n.Messages.TerminListView_noPatientSelected;
+
 }

@@ -11,9 +11,8 @@ package at.medevit.elexis.cobasmira;
 
 
 import org.eclipse.osgi.util.NLS;
-public class Messages extends NLS {
+public class Messages{
   public static final String BUNDLE_NAME = "at.medevit.elexis.cobasmira.messages";
-
     public static String CobasMiraAction_ButtonName = ch.elexis.core.l10n.Messages.CobasMiraAction_ButtonName;
     public static String CobasMiraAction_ConnectionName = ch.elexis.core.l10n.Messages.CobasMiraAction_ConnectionName;
     public static String CobasMiraAction_DefaultIgnoreUser = ch.elexis.core.l10n.Messages.CobasMiraAction_DefaultIgnoreUser;
@@ -58,11 +57,6 @@ public class Messages extends NLS {
     public static String UI_description = ch.elexis.core.l10n.Messages.UI_description;
     public static String UI_elexis_state = ch.elexis.core.l10n.Messages.UI_elexis_state;
     public static String UI_type = ch.elexis.core.l10n.Messages.UI_type;
-  static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 
-  private Messages() {
-  }
 }
 

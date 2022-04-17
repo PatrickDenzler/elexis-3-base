@@ -11,8 +11,7 @@ package ch.elexis.molemax;
 
 import org.eclipse.osgi.util.NLS;
 
-public class Messages extends NLS {
-  private static final String BUNDLE_NAME = "ch.elexis.molemax.messages";
+public class Messages{
     public static String AllSlotsDisplay_back = ch.elexis.core.l10n.Messages.AllSlotsDisplay_back;
     public static String AllSlotsDisplay_front = ch.elexis.core.l10n.Messages.AllSlotsDisplay_front;
     public static String AllSlotsDisplay_left = ch.elexis.core.l10n.Messages.AllSlotsDisplay_left;
@@ -47,7 +46,4 @@ public class Messages extends NLS {
     public static String TimeMachineDisplay_back = ch.elexis.core.l10n.Messages.TimeMachineDisplay_back;
     public static String TimeMachineDisplay_date = ch.elexis.core.l10n.Messages.TimeMachineDisplay_date;
 
-    static { // load message values from bundle file
-    NLS.initializeMessages(BUNDLE_NAME, Messages.class);
-  }
 }
